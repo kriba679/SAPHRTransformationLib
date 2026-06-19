@@ -26,12 +26,6 @@ This repository is a living knowledge base for SAP integration architects, BTP e
 │   ├── SAP Cloud ALM — Integration Monitoring
 │   ├── SAP Cloud Transport Management (cTMS)
 │   └── SAP BTP Audit Log & SIEM Integration
-│
-└── Additional Documents/
-    ├── Authentication types & OAuth flows
-    ├── IPS transformation & provisioning
-    ├── Security patterns
-    └── Governance models
 ```
 
 ---
