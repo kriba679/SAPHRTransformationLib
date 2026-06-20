@@ -38,6 +38,7 @@ This repository is a living knowledge base for SAP integration architects, BTP e
             (Migration, Replication, Employee Migration Scenarios)
 ```
 
+
 ---
 
 ## 01 Strategy
