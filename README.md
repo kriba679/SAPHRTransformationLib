@@ -1,12 +1,12 @@
-# SAP HR Transformation— Knowledge Library
+# SAP HR Transformation — Knowledge Library
 
-A practitioner's reference library for SAP HR Transformation programmes, covering the end-to-end **Hire-to-Retire (H2R)** business process. The library is organized into two pillars: **Strategy & Governance** and **SAP Products**. Each section contains architecture decisions, configuration guides, and step-by-step screenshots built from real project experience.
+A practitioner's reference library for SAP HR Transformation programmes, covering the end-to-end **Hire-to-Retire (H2R)** business process. The library is organized into three pillars: **Strategy & Governance**, **SAP Services** (cloud platform, integration, identity, and operations), and **SAP HR Transformation** (on-premise ECC/S4 HCM core configuration). Each section contains architecture decisions, configuration guides, and step-by-step screenshots built from real project experience.
 
 ---
 
 ## What This Library Covers
 
-This repository is a living knowledge base for SAP integration architects, BTP engineers, and HR transformation leads. It is structured around the technologies and decisions that govern a modern H2R landscape — from integration strategy through to individual product configuration.
+This repository is a living knowledge base for SAP integration architects, BTP engineers, and HCM functional consultants. It spans both ends of an H2R landscape: the cloud-side strategy, governance, and integration layer (BTP, Integration Suite, IAS/IPS) and the on-premise core — building and configuring SAP ECC/S4 HCM from the ground up (Enterprise Structure, Personnel Structure, Organizational Management, Payroll, and Time Management).
 
 ---
 
@@ -26,14 +26,16 @@ This repository is a living knowledge base for SAP integration architects, BTP e
 │   ├── SAP Cloud ALM — Integration Monitoring
 │   ├── SAP Cloud Transport Management (cTMS)
 │   └── SAP BTP Audit Log & SIEM Integration
-|
-├── 02 SAP HR Transformation/
-│   ├── Phase 1 Organization Set up
-|   |   ├── 00 Stage 0, 1 - Enterprise Structure
-|   |   ├── 01 Stage 2 - Number Ranges
-│   ├── Phase 2 SF Integration
-|   |   ├── 01 Stage 1 - Migration
-|   |   ├── 02 Stage 2 - Replication
+│
+└── 03 SAP HR Transformation/
+    ├── HR Data Migration/
+    │   ├── Phase 1 Organization Set up — Stages 0–10
+    │   │   (Enterprise Structure, Number Ranges, Payroll Area & Control Record,
+    │   │    PINCH & Admin Groups, Pay Scale Structure, Features, Organizational
+    │   │    Management, PA-OM Integration, Personnel Administration, Employee
+    │   │    Hiring, Time Management)
+    │   └── Phase 2 SF Integration
+    │       (Migration, Replication, Employee Migration Scenarios)
 ```
 
 ---
@@ -96,13 +98,13 @@ IAS sits at the centre — it acts as a **proxy** between the corporate identity
 
 ---
 
-## 02 SAP Products
+## 02 SAP Services
 
-Each product document covers architecture, design decisions, procurement/licensing, step-by-step configuration, and common pitfalls.
+Each service document covers architecture, design decisions, procurement/licensing, step-by-step configuration, and common pitfalls.
 
 ### SAP Business Technology Platform (BTP)
 
-**File:** `02 SAP Products/00 SAP_BTP_Hire_to_Retire.md`
+**File:** `02 SAP Services/00 SAP_BTP_Hire_to_Retire.md`
 
 Covers the foundational BTP infrastructure for H2R:
 
@@ -117,9 +119,9 @@ Covers the foundational BTP infrastructure for H2R:
 
 ### SAP Identity Authentication Service (IAS) & Identity Provisioning Service (IPS)
 
-**File:** `02 SAP Products/01 SAP_IAS_IPS_Hire_to_Retire.md`
+**File:** `02 SAP Services/01 SAP_IAS_IPS_Hire_to_Retire.md`
 
-**Config Details:** `02 SAP Products/01.1 IAS Config.md`
+**Config Details:** `02 SAP Services/01.1 IAS Config.md`
 
 Covers the full identity lifecycle for H2R:
 
@@ -134,7 +136,7 @@ Covers the full identity lifecycle for H2R:
 
 ### SAP Integration Suite — Hire-to-Retire
 
-**File:** `02 SAP Products/02 SAP_Integration_Suite_Hire_to_Retire.md`
+**File:** `02 SAP Services/02 SAP_Integration_Suite_Hire_to_Retire.md`
 
 Covers the full iFlow development lifecycle for H2R replication:
 
@@ -150,7 +152,7 @@ Covers the full iFlow development lifecycle for H2R replication:
 
 ### SAP Cloud ALM — Integration Monitoring
 
-**File:** `02 SAP Products/03 SAP_Cloud_ALM_Hire_to_Retire.md`
+**File:** `02 SAP Services/03 SAP_Cloud_ALM_Hire_to_Retire.md`
 
 Covers Cloud ALM as the operations hub for H2R monitoring:
 
@@ -164,9 +166,9 @@ Covers Cloud ALM as the operations hub for H2R monitoring:
 
 ### SAP Cloud Transport Management (cTMS)
 
-**File:** `02 SAP Products/04 SAP_Transport_Management_Hire_to_Retire.md`
+**File:** `02 SAP Services/04 SAP_Transport_Management_Hire_to_Retire.md`
 
-**Config Details:** `02 SAP Products/04.1 TMS Config.md`
+**Config Details:** `02 SAP Services/04.1 TMS Config.md`
 
 Covers controlled promotion of Integration Suite artifacts across landscapes:
 
@@ -180,7 +182,7 @@ Covers controlled promotion of Integration Suite artifacts across landscapes:
 
 ### SAP BTP Audit Log & SIEM Integration
 
-**File:** `02 SAP Products/05 SAP_BTP_Audit_Management_SIEM.md`
+**File:** `02 SAP Services/05 SAP_BTP_Audit_Management_SIEM.md`
 
 Covers the audit log architecture and SIEM routing for compliance:
 
@@ -194,6 +196,21 @@ Covers the audit log architecture and SIEM routing for compliance:
 
 ---
 
+## 03 SAP HR Transformation
+
+While Strategy and SAP Services cover the cloud-side integration and platform layer, this pillar covers the **on-premise core** — building and configuring SAP ECC / S/4HANA HCM from a blank system through to a working Hire-to-Retire lifecycle, and then extending that core into a hybrid landscape with SAP SuccessFactors. Content is organized into two streams: a phased, stage-by-stage configuration build (`HR Data Migration`) and a topic-by-topic reference library (`SAP HCM`) covering structures, SuccessFactors integration patterns, and migration/replication artifacts.
+
+### HR Data Migration — Phased Configuration Build
+
+**Folder:** `03 SAP HR Transformation/HR Data Migration/`
+
+A stage-by-stage build of a working HCM system, where each stage depends on the one before it:
+
+- **Phase 1 — Organization Set Up (Stages 0–10):** Enterprise Structure, Number Ranges, Payroll Area & Control Record, PINCH & Admin Groups, Pay Scale Structure, Features (TARIF & LGMST), Organizational Management, PA-OM Integration, Personnel Administration, Employee Hiring, Time Management
+- **Phase 2 — SF Integration:** Migration, Replication, and Employee Migration Scenarios — extending the on-premise build into a hybrid landscape with SAP SuccessFactors Employee Central
+
+---
+
 ## Technology Stack
 
 | Layer | Technology |
@@ -202,7 +219,7 @@ Covers the audit log architecture and SIEM routing for compliance:
 | Integration Middleware | SAP Integration Suite (Cloud Integration + API Management) |
 | Identity & SSO | SAP IAS (Identity Authentication), SAP IPS (Identity Provisioning) |
 | Platform | SAP Business Technology Platform (BTP), Cloud Foundry |
-| On-Premise HR | SAP ERP HCM (PA/OM/Payroll/Time), SAP S/4HANA HCM |
+| On-Premise HR Core | SAP ERP HCM (PA/OM/Payroll/Time), SAP S/4HANA HCM (H4S4 compatibility scope) |
 | Corporate Directory | Microsoft Azure AD / Microsoft Entra ID |
 | DevOps | SAP Cloud Transport Management (cTMS), GitHub |
 | Monitoring | SAP Cloud ALM |
@@ -249,7 +266,7 @@ These are the non-obvious decisions that shape the entire H2R landscape and are 
 
 ## About This Library
 
-Built from hands-on experience delivering SAP HR Transformation programmes. The content reflects real implementation decisions, common pitfalls encountered in the field, and the governance patterns needed to operate a production H2R landscape safely and sustainably.
+Built from hands-on experience delivering SAP HR Transformation programmes — spanning both the cloud integration layer and the on-premise HCM core. The content reflects real implementation decisions, common pitfalls encountered in the field, and the governance patterns needed to operate a production H2R landscape safely and sustainably.
 
 Contributions, corrections, and additional SAP product documentation are welcome via pull request.
 
