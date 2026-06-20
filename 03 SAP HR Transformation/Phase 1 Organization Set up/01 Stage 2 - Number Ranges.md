@@ -57,7 +57,7 @@ Save → choose your customizing transport request.
 
 ---
 
-![](20260510175251.png)
+![](screenshots/screenshots/20260510175251.png)
 
 
 ## 2. NUMKR Feature — PE03
@@ -107,7 +107,7 @@ NUMKR
 
 But for now: **single line `&NUMKR=01.`**.
 
-![](20260510180006.png)
+![](screenshots/20260510180006.png)
 ### Activate the feature
 
 After saving, click the **Activate** button (yellow lightning icon at top). A feature is useless until activated — easy to miss.
@@ -168,17 +168,17 @@ Common object types you need:
 4. For Person (01P) and Cost Center (01K): tick the **Ext** checkbox (= `EX`)
 5. Save → transport
 
-![](20260510182852.png)
+![](screenshots/20260510182852.png)
 
-![](20260510182915.png)
+![](screenshots/20260510182915.png)
 
-![](20260510182942.png)
+![](screenshots/20260510182942.png)
 
-![](20260510183011.png)
+![](screenshots/20260510183011.png)
 
-![](20260510183025.png)
+![](screenshots/20260510183025.png)
 
-![](20260510183037.png)
+![](screenshots/20260510183037.png)
 ### Verification
 - SE16N → table **NRIV** → object = `RP_PLAN`, sub-object = `01O` → confirm range exists.
 - Repeat for `01S`, `01C`, `01P`, `01K`.

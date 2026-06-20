@@ -183,13 +183,13 @@ This is what happens when you initially extract the data:
 - If the earliest transfer date is greater than the future cutoff date, then the earliest transfer date is considered during the data extraction.
 
 **Concepts**
-![](20260616092057.png)
+![](screenshots/20260616092057.png)
 
-![](20260616092113.png)
+![](screenshots/20260616092113.png)
 
-![](20260616092301.png)
+![](screenshots/20260616092301.png)
 
-![](20260616092312.png)
+![](screenshots/20260616092312.png)
 
 
 When Infoporter runs with a cutoff date of, say, January 1, 2025:
