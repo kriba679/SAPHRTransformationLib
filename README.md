@@ -19,13 +19,21 @@ This repository is a living knowledge base for SAP integration architects, BTP e
 │   ├── BTP Infrastructure Management
 │   └── SSO End-to-End Process
 │
-├── 02 SAP Products/
+├── 02 SAP Services/
 │   ├── SAP BTP — Account Model & Infrastructure
 │   ├── SAP IAS & IPS — Identity & SSO
 │   ├── SAP Integration Suite — iFlow Development
 │   ├── SAP Cloud ALM — Integration Monitoring
 │   ├── SAP Cloud Transport Management (cTMS)
 │   └── SAP BTP Audit Log & SIEM Integration
+|
+├── 02 SAP HR Transformation/
+│   ├── Phase 1 Organization Set up
+|   |   ├── 00 Stage 0, 1 - Enterprise Structure
+|   |   ├── 01 Stage 2 - Number Ranges
+│   ├── Phase 2 SF Integration
+|   |   ├── 01 Stage 1 - Migration
+|   |   ├── 02 Stage 2 - Replication
 ```
 
 ---
